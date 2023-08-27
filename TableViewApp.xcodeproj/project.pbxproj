@@ -13,6 +13,8 @@
 		9934CF7A2A9B1B9C0065D60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9934CF782A9B1B9C0065D60A /* Main.storyboard */; };
 		9934CF7C2A9B1B9C0065D60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9934CF7B2A9B1B9C0065D60A /* Assets.xcassets */; };
 		9934CF7F2A9B1B9C0065D60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9934CF7D2A9B1B9C0065D60A /* LaunchScreen.storyboard */; };
+		9934CF872A9B20190065D60A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9934CF862A9B20190065D60A /* TableViewController.swift */; };
+		9934CF892A9B2B390065D60A /* AddListViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9934CF882A9B2B390065D60A /* AddListViewControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9934CF7B2A9B1B9C0065D60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9934CF7E2A9B1B9C0065D60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9934CF802A9B1B9C0065D60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9934CF862A9B20190065D60A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9934CF882A9B2B390065D60A /* AddListViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				9934CF722A9B1B9C0065D60A /* AppDelegate.swift */,
 				9934CF742A9B1B9C0065D60A /* SceneDelegate.swift */,
+				9934CF862A9B20190065D60A /* TableViewController.swift */,
 				9934CF762A9B1B9C0065D60A /* ViewController.swift */,
+				9934CF882A9B2B390065D60A /* AddListViewControllerViewController.swift */,
 				9934CF782A9B1B9C0065D60A /* Main.storyboard */,
 				9934CF7B2A9B1B9C0065D60A /* Assets.xcassets */,
 				9934CF7D2A9B1B9C0065D60A /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 				9934CF772A9B1B9C0065D60A /* ViewController.swift in Sources */,
 				9934CF732A9B1B9C0065D60A /* AppDelegate.swift in Sources */,
 				9934CF752A9B1B9C0065D60A /* SceneDelegate.swift in Sources */,
+				9934CF892A9B2B390065D60A /* AddListViewControllerViewController.swift in Sources */,
+				9934CF872A9B20190065D60A /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67WLMQ49VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67WLMQ49VC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

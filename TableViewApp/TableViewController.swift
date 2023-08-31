@@ -4,6 +4,10 @@
 //
 //  Created by 丸山航輝 on 2023/08/27.
 //
+//編集モードの概念
+//discardコマンド邪魔すぎる
+/*https://capibara1969.com/1443/#toc5*/
+
 
 import UIKit
 

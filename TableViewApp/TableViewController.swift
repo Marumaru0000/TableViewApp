@@ -71,35 +71,6 @@ class TableViewController: UITableViewController {
         return cell
     }
     
-    //削除する
-    //課題の部分
-    @IBAction func clearButton(_ sender: UIButton) {
-        // 配列を空にする
-            taskArray.removeAll()
-
-            // UserDefaultsの内容も更新する
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(taskArray, forKey: "add")
-
-            // テーブルビューを更新
-            tableView.reloadData()
-    }
-    //スライドで削除する
-    //課題の部分
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // taskArrayから要素を削除
-            taskArray.remove(at: indexPath.row)
-
-            // UserDefaultsの内容も更新する
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(taskArray, forKey: "add")
-
-            // テーブルビューからセルを削除
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -117,7 +88,7 @@ class TableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

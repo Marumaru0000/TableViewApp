@@ -99,7 +99,7 @@
                             <rect key="frame" x="0.0" y="121.66666793823242" width="393" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="全削除"/>
                             <connections>
                                 <action selector="clearButton:" destination="Xxz-U4-NOr" eventType="touchUpInside" id="y8z-4Y-ATA"/>
                             </connections>

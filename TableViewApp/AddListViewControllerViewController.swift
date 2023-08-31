@@ -16,23 +16,27 @@ class AddListViewControllerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    @IBAction func addButton(_ sender: UIButton) {
-        let userDefaults = UserDefaults.standard //そのままだと長いので変数にいれる
-        
-        //課題の部分
-        // UserDefaultsから現在の配列を読み込む
-        if let currentTasks = userDefaults.array(forKey: "add") as? [String] {
-            taskArray = currentTasks
+        //まずはUserDefaultsからすでに入力されているタスクをtaskArrayに読み込む
+        let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: "add") != nil{
+            taskArray = userDefaults.object(forKey: "add") as! [String]
         }
-        
-        taskArray.append(addTextField.text!) //TextFieldで記入されたテキストを入れる
-
-        userDefaults.set(taskArray, forKey: "add") //キー"add"で配列をUserDefaultsに保存
-
-        self.navigationController?.popViewController(animated: true) //1つ前の画面に戻る
-        
     }
+    @IBAction func addTask(_ sender: UIButton) {
+        // TextFieldのテキストをオプショナルバインディングを使用して取得
+        if let text = addTextField.text, !text.isEmpty {
+            let userDefaults = UserDefaults.standard
+            taskArray.append(text)
+            userDefaults.set(taskArray, forKey: "add")
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            // エラーメッセージを表示（オプション）
+            let alert = UIAlertController(title: "エラー", message: "タスクを入力してください。", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
 
 
     /*

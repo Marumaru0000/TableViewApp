@@ -28,7 +28,9 @@ class TableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //tableView.isEditing = true //編集モードにする。
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -70,6 +72,29 @@ class TableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // データソースから要素を削除
+            taskArray.remove(at: indexPath.row)
+            
+            // UserDefaultsを更新
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(taskArray, forKey: "add")
+            
+            // テーブルビューからセルを削除
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+
     
 
     /*
